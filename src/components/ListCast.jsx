@@ -1,15 +1,4 @@
-import { useState, useEffect } from "react"
-
-export default ()=>{
-  const [cast, setCast] = useState([]);
-
-  async function fetchCast(){
-    const response = await fetch('cast.json');
-    setCast(await response.json());
-  }
-  useEffect(()=>{
-    fetchCast();
-  });
+export default ({cast, onChoice})=>{
 
   return(
     <div style={{
@@ -19,7 +8,7 @@ export default ()=>{
       marginBottom: '1rem'
     }}>
       {cast.map(member => (
-        <a key={member.id} data-tooltip={member.name}> {/*data-tooltip is a pico.css element that allows easy hover-text*/}
+        <a onClick={()=> {onChoice(member)}} key={member.id} data-tooltip={member.name}> {/*data-tooltip is a pico.css element that allows easy hover-text*/}
           <img src={`images/${member.slug}_tn.svg`} alt={member.name}></img>
         </a>
       ))}
