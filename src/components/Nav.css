@@ -1,0 +1,23 @@
+nav ul li, nav ul li a{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+nav summary + ul li{
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+nav details li a{
+  font-size: .7em;
+}
+
+details[role="list"] summary + ul li a:hover{
+  color:var(--primary);
+  font-weight: 700;
+}
+/* Use Computed tab + Styles tab of inspector to determine the types of styling
+being used on a given website */
+/* Use picocss.com to help find available customization options 
+also provides options for overriding default variables
+install picocss and sass using: npm -D @picocss/pico sass*/

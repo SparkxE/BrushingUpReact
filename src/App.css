@@ -1,0 +1,8 @@
+:root{
+  --primary: #00A86B!important; 
+  /*creates a variable at the root level, can be used by other CSS files within 
+  the same react project by calling "var(--name)"*/
+}
+h1, h2, h3, h4, h5, h6, b{
+  color: var(--primary);
+}

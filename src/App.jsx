@@ -3,6 +3,7 @@ import ListCast from './components/ListCast';
 import Modals from './components/Modals';
 import Nav from './components/Nav';
 import "./App.scss";
+import "./App.css";
 import Welcome from './components/Welcome';
 import Support from './components/Support';
 
