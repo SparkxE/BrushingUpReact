@@ -12,13 +12,26 @@ export default ({member, handleClose, handleChange, castCount})=>{
             <hgroup>
               <h1>{member.name}</h1>
               <p>{member.bio}</p>
-              <hgroup>
+              <hgroup style={{
+                display: "flex",
+                gap: '1rem',
+                marginTop: '1rem',
+                justifyContent: 'space-between'
+              }}>
                 <a className="outline" href="#" role="button"
                   onClick={()=>{handleChange(Number(member.id)-1)}}
-                >{Number(member.id)-1<=0?'Close':'Previous'}</a>
+                >
+                {Number(member.id)-1<0?
+                  <span className="material-symbols-outlined">close</span>:
+                  <span className="material-symbols-outlined">arrow_back</span>
+                }</a>
                 <a className="outline" href="#" role="button"
                   onClick={()=>{handleChange(Number(member.id)+1)}}
-                >{(Number(member.id)+1)>=castCount?'Close':'Next'}</a>
+                >
+                  {(Number(member.id)+1)>=castCount?
+                  <span className="material-symbols-outlined">close</span>:
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                }</a>
               </hgroup>
             </hgroup>
           </div>

@@ -2,3 +2,7 @@ Vite is a more modern version of create-react-app, it supports multiple
 frameworks by default, it comes with Hot Module Reloading (automatic 
 component reloading instead of needing to reload entire app after each
 change) and is Sass compatible out of the box. 
+
+Build & Publishing: 
+  npm run build - builds project into a more compressed format to better 
+  publish the build
